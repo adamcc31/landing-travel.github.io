@@ -389,7 +389,9 @@
                 </div>
             </div>
         </div>
-
+	<!-- Thumbnail Image -->
+    <img src="/img/Video.jpg" alt="Video Thumbnail" class="img-fluid video-thumbnail" data-bs-toggle="modal" data-bs-target="#videoModal">
+	    
         <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content rounded-0">
@@ -658,6 +660,19 @@
             ) {
                 e.preventDefault();
             }
+        });
+    </script>
+<script>
+        $(document).ready(function() {
+            var videoSrc = "https://www.youtube.com/embed/YOUR_VIDEO_ID"; // Ganti YOUR_VIDEO_ID dengan ID video YouTube Anda
+
+            $('#videoModal').on('show.bs.modal', function() {
+                $("#video").attr('src', videoSrc);
+            });
+
+            $('#videoModal').on('hide.bs.modal', function() {
+                $("#video").attr('src', '');
+            });
         });
     </script>
       <!-- Template Javascript -->
