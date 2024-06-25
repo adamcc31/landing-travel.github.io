@@ -152,12 +152,12 @@
                         <div class="col-md-3">
                             <div class="date" id="date1" data-target-input="nearest">
                                 <input type="text" id="checkin" class="form-control datetimepicker-input"
-                                    placeholder="Tanggal Sampai Di Indonesia" data-target="#date1" data-toggle="datetimepicker" />
+                                    placeholder="Tanggal Pemesanan" data-target="#date1" data-toggle="datetimepicker" />
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="date" id="date2" data-target-input="nearest">
-                                <input type="text" id="checkout" class="form-control datetimepicker-input" placeholder="Tanggal Kepulangan" data-target="#date2" data-toggle="datetimepicker"/>
+                                <input type="text" id="checkout" class="form-control datetimepicker-input" placeholder="Tanggal Sampai Di Indonesia" data-target="#date2" data-toggle="datetimepicker"/>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -194,7 +194,7 @@
         var checkout = document.getElementById('checkout').value;
         var adults = document.getElementById('adults').value;
         var luggage = document.getElementById('luggage').value;
-        var message = `Halo, saya ingin memesan snopy travel dengan rincian sebagai berikut:%0A- Tanggal Sampai: ${checkin}%0A- Tanggal Kepulangan: ${checkout}%0A- Dewasa: ${adults} Orang%0A- Koper: ${luggage} Koper`;
+        var message = `Halo, saya ingin memesan snopy travel dengan rincian sebagai berikut:%0A- Tanggal Pemesanan: ${checkin}%0A- Tanggal Sampai di Indonesia: ${checkout}%0A- Dewasa: ${adults} Orang%0A- Koper: ${luggage} Koper`;
         var whatsappUrl = `https://wa.me/628118680138?text=${message}`;
         document.getElementById('submitBtn').href = whatsappUrl;
     };
